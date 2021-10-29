@@ -1,0 +1,11 @@
+#+TITLE: Basic shadow-cljs project template
+
+* Development
+
+- From within Emacs, do ~M-x cider-jack-in-cljs~ (or ~C-c M-J~ from a ~clojure-mode~ buffer)
+- Visit http://localhost:8000
+
+* Tests
+
+- From the CLI, run ~npx shadow-cljs watch test~
+- Visit http://localhost:8001

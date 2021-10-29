@@ -1,0 +1,17 @@
+{:source-paths ["src" "test"]
+
+ :dependencies [[org.harto/huon "1.0.0-SNAPSHOT"]
+                [binaryage/devtools "1.0.4"]] ;; https://github.com/binaryage/cljs-devtools/releases/latest
+
+ :dev-http {8000 "public"}
+
+ :builds {:main {:target :browser
+                 :output-dir "public/js"
+                 :asset-path "/js"
+                 :modules {:main {:init-fn foo.main/init}}}
+
+          :test {:target :browser-test
+                 :test-dir "public/test"
+                 :ns-regexp "-test$"
+                 :devtools {:http-port 8001
+                            :http-root "public/test"}}}}
